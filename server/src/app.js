@@ -29,4 +29,3 @@ sequelize.sync({ force: false }).then(() => {
 
 
 
-page 82
