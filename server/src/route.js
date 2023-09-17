@@ -2,7 +2,7 @@ const UserController = require('./controllers/UserController')
 
 module.exports = (app) =>{
     //get all
-    app.get('/user', UserController.index),
+    app.get('/users', UserController.index),
 
     //create
     app.post('/user', UserController.creat),
