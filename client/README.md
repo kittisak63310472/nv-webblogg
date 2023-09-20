@@ -1,4 +1,4 @@
-# nv-webblog-client
+# nv-wbblog-client
 
 > nodejs vuejs webblog client
 

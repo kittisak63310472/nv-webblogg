@@ -1,8 +1,8 @@
 {
-  "name": "nv-webblog-client",
+  "name": "nv-wbblog-client",
   "version": "1.0.0",
   "description": "nodejs vuejs webblog client",
-  "author": "(kittisak <kittisak63@nu.ac.th>)",
+  "author": "patipol kaeomaung",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,7 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^1.5.0",
     "vue": "^2.5.2",
+    "vue-resource": "^1.5.3",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
