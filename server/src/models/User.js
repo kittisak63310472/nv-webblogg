@@ -18,16 +18,24 @@ module.exports = (sequelize, DataTypes) => {
         password: DataTypes.STRING,
         name: DataTypes.STRING,
         lastname: DataTypes.STRING,
-        status: DataTypes.STRING
+        status: DataTypes.STRING,
+        type: DataTypes.STRING
     }, {
         hooks: {
             beforeCreate: hashPassword,
             beforeUpdate: hashPassword
         }
     })
+
     User.prototype.comparePassword = function (password) {
         return bcrypt.compareSync(password, this.password)
+
+        //if (password == this.password) {
+        //   return true
+        // }
+        // return false
     }
     User.associate = function (models) { }
+
     return User
 }

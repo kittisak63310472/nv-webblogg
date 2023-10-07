@@ -32,6 +32,7 @@ export default {
     <div>
 
         <h2>Get all users</h2>
+        <p><button v-on:click="logout">Logout</button></p>
         <h4>จํานวนผู้ใช้งาน {{ users.length }}</h4>
         <hr>
         <!-- ลูปตามจำนวน id (primary key) -->
@@ -73,6 +74,13 @@ export default {
 
     methods: {
 
+        logout() {
+            this.$store.dispatch('setToken', null)
+            this.$store.dispatch('setUser', null)
+            this.$router.push({
+                name: 'login'
+            })
+        },
         navigateTo(route) {
             this.$router.push(route)
         },
